@@ -11,10 +11,11 @@ class Variable:
         self.value = Variable.LOWER_LIMIT
         
     def set_value(self,value):
+        #print("Este es el valor que recibo:", value)
         if (value >= Variable.LOWER_LIMIT and value <= Variable.UPPER_LIMIT ):
             self.value = value
         else:
-            #cuando value esté entre el 0.0 y la resoñución establezco a value a 0.0
+            #cuando value esté entre el 0.0 y la resolución establezco a value a 0.0
             if (self.value > Variable.LOWER_LIMIT and self.value < Variable.VALUE_INCREMENT):
                 self.value = Variable.LOWER_LIMIT
             else:
@@ -22,7 +23,7 @@ class Variable:
                     if(self.value >(Variable.UPPER_LIMIT - Variable.VALUE_INCREMENT ) and self.value < Variable.UPPER_LIMIT):
                         self.value = Variable.UPPER_LIMIT
                     else:
-                        print("el valor estafuera del rango permitido [0.0 - 1.0]")
+                        print("el valor esta fuera del rango permitido [0.0 - 1.0]")
 
     
     def get_value(self):
