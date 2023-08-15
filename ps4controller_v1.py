@@ -16,9 +16,13 @@ class MyController(Controller):
 
         super().__init__(**kwargs)
 
-        
+    def on_R2_press(self,value):
+        pass    
+    def on_R2_release(self):
+        pass    
+    
     #PWM1 - Variable S
-   # def on_up_arrow_press(self):
+    # def on_up_arrow_press(self):
     def on_R3_down(self,value):    
         new_value = self.s.get_value() + Variable.get_increment()
         self.s.set_value(new_value)
